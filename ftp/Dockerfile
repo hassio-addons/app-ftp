@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.8
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -22,7 +22,7 @@ RUN \
     && cd - \
     \
     && apk add --no-cache \
-        openssl=3.5.7-r0 \
+        openssl=3.5.9-r0 \
         vsftpd=3.0.5-r3 \
     \
     && apk del --no-cache --purge .build-dependencies \
